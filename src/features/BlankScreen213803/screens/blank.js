@@ -24,9 +24,7 @@ export default class Blank extends React.Component {
   }
 
   state = {
-    TextInput_7: "",
     DateTimePicker_9: new Date(""),
-    TextInput_11: "",
     Switch_13: true,
     CheckBox_32: true,
     TextInput_17: "",
@@ -37,23 +35,15 @@ export default class Blank extends React.Component {
     <View>
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
       <Text>Sample text content</Text>
-      <TextInput
-        placeholder="Sample text input placeholder"
-        value={this.state.TextInput_7}
-        onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
-      />
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_9}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_9: selectedDate })
         }
       />
-      <TextInput
-        placeholder="Number Input Placeholder"
-        value={this.state.TextInput_11}
-        onChangeText={nextValue => this.setState({ TextInput_11: nextValue })}
-      />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_13}
         onValueChange={nextChecked => this.setState({ Switch_13: nextChecked })}
       />
@@ -65,14 +55,13 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Sample text input placeholder"
+        multiline={true}
         style={styles.TextInput_17}
         value={this.state.TextInput_17}
         onChangeText={nextValue => this.setState({ TextInput_17: nextValue })}
       />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_19}
         onPress={nextChecked => this.setState({ CheckBox_19: nextChecked })}
       />
@@ -101,6 +90,15 @@ const styles = StyleSheet.create({
   TextInput_7: {},
   DateTimePicker_9: {},
   TextInput_11: {},
+  Switch_13: {},
+  Slider_15: {},
+  CheckBox_32: {},
+  TextInput_17: { height: 100 },
+  CheckBox_19: {},
+  View_1: {},
+  Button_3: {},
+  Text_5: {},
+  DateTimePicker_9: {},
   Switch_13: {},
   Slider_15: {},
   CheckBox_32: {},
